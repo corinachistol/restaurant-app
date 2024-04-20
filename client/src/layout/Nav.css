@@ -1,0 +1,15 @@
+.navbar{
+    background-color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: white;
+    padding: .5rem;
+}
+
+.navbar a img {
+    height: 3rem;
+}
