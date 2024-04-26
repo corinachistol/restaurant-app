@@ -3,8 +3,7 @@
 const App = (props) => {
 
   return (
-    <div>
-      <h1 className="text-center text-blue-400 text-3xl">Hello Tailwind</h1>
+    <div className="bg-zinc-700 text-white">
      {props.children}
     </div>
   );

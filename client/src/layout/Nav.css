@@ -1,4 +1,4 @@
-.navbar{
+ .navbar{
     background-color: #333;
     display: flex;
     align-items: center;
@@ -11,5 +11,5 @@
 }
 
 .navbar a img {
-    height: 3rem;
+    height: 3rem; 
 }
