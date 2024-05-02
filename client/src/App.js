@@ -3,7 +3,7 @@
 const App = (props) => {
 
   return (
-    <div className="bg-zinc-700 text-white">
+    <div className="relative bg-zinc-700 text-white">
      {props.children}
     </div>
   );

@@ -6,7 +6,7 @@ import App from './App';
 
 
 import Content from "./layout/Content";
-import Footer from "./layout/Footer";
+import Footer2 from "./layout/Footer2";
 import Header from "./layout/Header";
 
 
@@ -16,7 +16,7 @@ root.render(
     <App>
       <Header/>
       <Content />
-      <Footer />
+      <Footer2 />
     </App>
   </React.StrictMode>
 );
