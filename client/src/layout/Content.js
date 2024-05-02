@@ -1,7 +1,9 @@
-const Content = () => {
+import Menu from "../restaurant/Menu";
+
+const Content = (props) => {
     return (
         <main>
-            Main
+           {props.children}
         </main>
       );
 }
