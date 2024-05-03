@@ -1,12 +1,12 @@
 import Logo from "./Logo";
-import { BsFacebook, BsInstagram, BsTwitter } from "react-icons/bs";
-
+import { BsFacebook, BsInstagram, BsWhatsapp } from "react-icons/bs";
+import Chat from "./Chat";
 
 const Footer = () => {
     return (
-        <footer className="bg-zinc-800">
+        <footer className="bg-zinc-800 ">
             <div className="container flex flex-col-reverse justify-between px-6 py-10 mx-auto space-y-8 md:flex-row md:space-y-0">
-                <div>
+                <div className="flex flex-col justify-even">
                     <div className="mx-auto my-6 text-center text-white md:hidden">
                         Copyright &copy; 2024, All Rights Reserved
                     </div>
@@ -16,7 +16,7 @@ const Footer = () => {
 
                     <ul className="flex justify-center list-unstyled text-decoration-none space-x-4">
                         <li className="hover:no-underline">
-                            <a href="#" className=""><BsTwitter /></a>
+                            <a href="#" className=""><BsWhatsapp /></a>
                         </li>
                         <li className="">
                             <a href="#" className=""><BsInstagram/></a>
@@ -42,7 +42,7 @@ const Footer = () => {
                 
                 </div>
 
-                <div className="flex flex-col justify-between">
+                <div className="flex flex-col justify-between mx-3">
                     <form action="">
                         <div className="flex space-x-3">
                             <input type="text" 
@@ -57,6 +57,10 @@ const Footer = () => {
                         Copyright &copy; 2024, All rigths reserved
                     </div>
                 </div>
+            </div>
+
+            <div className="fixed bottom-3 right-3">
+                <Chat />
             </div>
         </footer>
       );

@@ -7,7 +7,7 @@ export const linkClass =
 
 const Nav = () => {
     return ( 
-        <nav className = " bg-zinc-800 flex item-center ">
+        <nav className = " bg-zinc-800 flex item-center">
            <Logo />
             <div className='flex flex-row ml-auto mr-3'>
 

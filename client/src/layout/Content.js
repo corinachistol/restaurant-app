@@ -1,4 +1,4 @@
-import Menu from "../restaurant/Menu";
+
 
 const Content = (props) => {
     return (
