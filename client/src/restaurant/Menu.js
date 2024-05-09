@@ -1,26 +1,18 @@
 import Item from "./Item";
-import { BsToggleOff, BsToggleOn } from "react-icons/bs";
+import { FaSortAmountDown , FaSortAmountDownAlt  } from "react-icons/fa";
 import { useState } from "react";
 
 
 const Menu = ({data}) => {
   let [itemsData,setItemsData] = useState(data)
-  const [filter,setFilter] = useState(false)
+  let [sortOrder,setSortOrder] = useState("desc")
 
-  const toggleFitler = () => {
-    console.log(filter)
-    
-    if(filter){
-      //if filter is true -> sortAsc
-      itemsData.sort((i1, i2) => i1.price.amount - i2.price.amount)
-      setItemsData([...itemsData])
-    }else{
-      //if filter is false -> sortDesc
-      itemsData.sort((i1, i2) => i2.price.amount - i1.price.amount)
-      setItemsData([...itemsData])
-    
-    }
-    setFilter(!filter)
+  const sortItems = () => {
+   
+    itemsData.sort(
+      (i1, i2) => sortOrder === "desc" ? i2.price.amount - i1.price.amount : i1.price.amount - i2.price.amount )
+    setItemsData([...itemsData])
+    setSortOrder(sortOrder === "desc" ? "asc" : "desc")
       
   }
   
@@ -28,8 +20,9 @@ const Menu = ({data}) => {
   
   return (
     <div className="container">
-      <button onClick={toggleFitler} >
-        {filter ? <BsToggleOn className="w-10 h-10 m-4"/> : <BsToggleOff className="w-10 h-10 m-4"/> } 
+      <button onClick={sortItems} className="p-4" >
+        {sortOrder === "desc" ? <FaSortAmountDownAlt className="w-10 h-10 m-4"/> 
+                            : <FaSortAmountDown className="w-10 h-10 m-4"/> } 
       </button>
      {/*
       HW1: add ascending sort
