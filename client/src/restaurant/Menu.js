@@ -1,6 +1,6 @@
 import Item from "./Item";
 import { BsChevronCompactDown, BsChevronCompactUp } from "react-icons/bs";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 
 const Menu = ({data}) => {
@@ -20,14 +20,18 @@ const Menu = ({data}) => {
 
   return (
     <div>
-      <button onClick={sortItemsDesc}><BsChevronCompactDown/> </button>
-      <button onClick={sortItemsAsc}><BsChevronCompactUp/> </button>
+      <button onClick={sortItemsDesc}>
+        <BsChevronCompactDown/>
+      </button>
+      <button onClick={sortItemsAsc}>
+        <BsChevronCompactUp/>
+      </button>
       {/* 
       HW1: add ascending sort
       Hw2: optimize using 1 button */}
 
       <ul className="p-4">
-          {data && data.map(itemData => (
+          {itemsData && itemsData.map(itemData => (
             <Item data={itemData} key={itemData.id} />
 
           ))}
