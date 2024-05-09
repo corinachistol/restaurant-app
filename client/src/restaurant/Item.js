@@ -1,7 +1,7 @@
 
 const Item = ({data}) => {
     // let data = props.data
-    console.log(data)
+    // console.log(data)
     return ( 
         <li className="p-2 border-solid border-b-2 border-zinc-500 ">
             <h2 className="font-bold">{data.name}</h2>
