@@ -27,15 +27,15 @@ const Menu = ({data}) => {
 
   
   return (
-    <div>
-      <button onClick={toggleFitler} className="w-10 h-10 m-4" >
-        {filter ? <BsToggleOn/> : <BsToggleOff/> } 
+    <div className="container">
+      <button onClick={toggleFitler} >
+        {filter ? <BsToggleOn className="w-10 h-10 m-4"/> : <BsToggleOff className="w-10 h-10 m-4"/> } 
       </button>
      {/*
       HW1: add ascending sort
-    Hw2: optimize using 1 button */}
+      Hw2: optimize using 1 button */}
 
-      <ul className="p-4">
+      <ul className="p-4 flex flex-col lg:flex-row">
           {itemsData && itemsData.map(itemData => (
             <Item data={itemData} key={itemData.id} />
             
