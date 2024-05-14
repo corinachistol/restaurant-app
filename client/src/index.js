@@ -14,7 +14,7 @@ import Menu from './restaurant/Menu';
 import { Food, Money } from './restaurant/Food';
 
 
-// const menuData = new Food(1, "Pizza", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxMVIL5tWY7MfEvRDwYUMbPiODGF35YvbxOA&s", 100);
+
 const menuData = [
   new Food(1, "Pizza", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxMVIL5tWY7MfEvRDwYUMbPiODGF35YvbxOA&s", 
           new Money(1, 150, "MDL")),
@@ -24,10 +24,12 @@ const menuData = [
           new Money(3, 120, "MDL")),
   new Food(4, "Fresh Salad", "https://corso.md/public/foods/thumbs/version_550x0x550x0x1/ffd79a42f9c7dbfb812214468094daf5.jpg", 
           new Money(4, 85, "MDL")),
+  new Food(5, "Pizza Genovese", "https://corso.md/public/foods/thumbs/version_550x0x550x0x1/26db120a497907eb29659a24bba914c8.jpg", 
+          new Money(5, 200, "MDL")),
 ];
 
 
-//HW1: try to pasds and render an array of food
+//HW1: try to pass and render an array of food
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
