@@ -1,10 +1,26 @@
 import Nav from "./Nav";
+import { useState } from "react";
 
-const Header = () => {
+import Menu from '../restaurant/Menu';
+import Content from "./Content";
+
+
+
+const Header = ({orderData, menuData}) => {
+
+    const [order, setOrder] = useState(orderData);
+
     return (
-        <header>
-            <Nav />
-        </header>
+        <div>
+            <header>
+                <Nav order={order} />
+            </header>
+
+            <Content>
+                <Menu data={menuData} order={order} setOrder={setOrder}  />
+            </Content>
+
+        </div>
       );
 }
  

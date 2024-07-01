@@ -3,7 +3,7 @@ import { FaSortAmountDown , FaSortAmountDownAlt  } from "react-icons/fa";
 import { useState } from "react";
 
 
-const Menu = ({data}) => {
+const Menu = ({data,order, setOrder}) => {
 
   let [itemsData,setItemsData] = useState(data)
   let [sortOrder,setSortOrder] = useState("desc")
@@ -15,6 +15,7 @@ const Menu = ({data}) => {
    
     itemsData.sort(
       (i1, i2) => sortOrder === "desc" ? i2.price.amount - i1.price.amount : i1.price.amount - i2.price.amount )
+
     setItemsData([...itemsData])
     setSortOrder(sortOrder === "desc" ? "asc" : "desc")
       
@@ -48,7 +49,7 @@ const Menu = ({data}) => {
       <div className="flex items-center p-4">
         <button onClick={sortItems} >
           {sortOrder === "desc" ? <FaSortAmountDownAlt className="w-10 h-10 m-4"/> 
-                              : <FaSortAmountDown className="w-10 h-10 m-4"/> } 
+                                : <FaSortAmountDown className="w-10 h-10 m-4"/> } 
         </button>
       
 
@@ -84,7 +85,7 @@ const Menu = ({data}) => {
 
       <ul className="p-4 flex flex-col lg:flex-row">
           {itemsData && itemsData.map(itemData => (
-            <Item data={itemData} key={itemData.id} />
+            <Item data={itemData} key={itemData.id} order={order} setOrder={setOrder} />
             
           ))}
       </ul>

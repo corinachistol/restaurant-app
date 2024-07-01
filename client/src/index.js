@@ -5,13 +5,13 @@ import './index.css';
 import App from './App';
 
 
-import Content from "./layout/Content";
 import Footer from "./layout/Footer";
 import Header from "./layout/Header";
 
-import Menu from './restaurant/Menu';
+
 
 import { Food, Money } from './restaurant/Food';
+import Order from './restaurant/Order';
 
 
 
@@ -28,6 +28,11 @@ const menuData = [
           new Money(5, 200, "MDL")),
 ];
 
+const orderData = new Order([
+  {itemId:1, quantity:1}
+])
+
+
 
 //HW1: try to pass and render an array of food
 
@@ -36,10 +41,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App>
-      <Header/>
-      <Content>
-        <Menu data={menuData} />
-      </Content>
+      <Header orderData = {orderData} menuData={menuData}/>
+        
       <Footer />
     </App>
   </React.StrictMode>
